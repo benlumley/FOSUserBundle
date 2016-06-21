@@ -1,3 +1,11 @@
+You probably don't want this fork.
+==================================
+
+This fork has been created to try and bridge some of the gaps between sylius userbundle + fos userbundle.
+
+It's used on an existing system with fos that we added sylius to. It is in no way complete/tested etc - what we need has been amended nothing more.
+
+
 FOSUserBundle
 =============
 
