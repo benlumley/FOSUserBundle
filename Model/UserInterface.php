@@ -175,7 +175,7 @@ interface UserInterface extends AdvancedUserInterface, \Serializable
      *
      * @return boolean true if the user's password request is non expired, false otherwise
      */
-    public function isPasswordRequestNonExpired($ttl);
+    public function isPasswordRequestNonExpired(\DateInterval $ttl);
 
     /**
      * Sets the last login time
