@@ -523,10 +523,9 @@ abstract class User implements UserInterface, GroupableInterface
         return $this->passwordRequestedAt;
     }
 
-    public function isPasswordRequestNonExpired($ttl)
+    public function isPasswordRequestNonExpired(\DateInterval $ttl)
     {
-        return $this->getPasswordRequestedAt() instanceof \DateTime &&
-               $this->getPasswordRequestedAt()->getTimestamp() + $ttl > time();
+        return null !== $this->passwordRequestedAt && new \DateTime() <= $this->passwordRequestedAt->add($ttl);
     }
 
     public function setRoles(array $roles)
